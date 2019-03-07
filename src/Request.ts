@@ -1,3 +1,6 @@
+/**
+* @module Request
+*/
 import _ from 'underscore';
 import qs from 'qs';
 import cookie from 'cookie';
@@ -360,13 +363,13 @@ export default class Request {
 
    // Disable changing the `path` via the public API by not implementing a setter here.
 
-   /** CLONING FUNCTION */
+   /* CLONING FUNCTION */
 
    public makeSubRequest(baseURL: string, params?: StringMap): Request {
       return new Request(this.app, this, this.context, baseURL, params);
    }
 
-   /** CONVENIENCE FUNCTIONS */
+   /* CONVENIENCE FUNCTIONS */
 
    public isALB(): boolean {
       return this.eventSourceType === Request.SOURCE_ALB;
@@ -376,7 +379,7 @@ export default class Request {
       return this.eventSourceType === Request.SOURCE_APIGW;
    }
 
-   /** INTERFACE FUNCTIONS */
+   /* INTERFACE FUNCTIONS */
 
    /**
     * Returns the specified HTTP request header field (case-insensitive match). The

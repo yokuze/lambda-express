@@ -1,3 +1,6 @@
+/**
+* @internal
+*/
 import ProcessorChain, { IRequestMatchingProcessorChain } from './ProcessorChain';
 
 export class MatchAllRequestsProcessorChain extends ProcessorChain implements IRequestMatchingProcessorChain {

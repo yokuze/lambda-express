@@ -1,3 +1,6 @@
+/**
+* @module Response
+*/
 import _ from 'underscore';
 import cookie from 'cookie';
 import { Application, Request } from '.';

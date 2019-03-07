@@ -58,7 +58,7 @@ module.exports = (grunt) => {
          },
          commonjs: {
             cmd: `${config.commands.tsc} -p ${config.ts.configs.commonjs} --pretty`,
-         },
+         }
       },
 
       clean: {

@@ -4,6 +4,7 @@ import Request from './Request';
 import Response from './Response';
 
 /**
+ * @remarks
  * The function that is passed to request processors for them to signal that they are done
  * performing their processing of the request. If an error occurred during the processing
  * of the request, the processor should pass the error as the only argument to the
@@ -13,18 +14,22 @@ import Response from './Response';
  * next request processor in the chain. On the other hand, if an error argument was passed
  * to the callback, all other standard request processors will be skipped and control will
  * be handed over to the first error-handling request processor in the chain.
+ *
+ * @public
  */
 export interface NextCallback {
    (err?: unknown): void;
 }
 
 /**
+ * @remarks
  * A function used to process each request (or each request for the route the processor is
  * added to). Request processors generally fall into one of two categories:
  *
  *    1. Middleware: where common functionality that needs to be used across multiple
  *       routes or has nothing to do with the business logic of a given route lives.
  *    2. Route handlers: where the business logic for a given route lives.
+ * @public
  */
 export interface RequestProcessor {
 
@@ -96,6 +101,9 @@ export interface RouterOptions {
    caseSensitive: boolean;
 }
 
+/**
+ * @public
+ */
 export interface IRouter {
 
    readonly routerOptions: RouterOptions;

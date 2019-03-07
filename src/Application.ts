@@ -1,3 +1,6 @@
+/**
+ * @module Application
+ */
 import { Callback } from 'aws-lambda';
 import Router from './Router';
 import { RequestEvent, HandlerContext } from './request-response-types';

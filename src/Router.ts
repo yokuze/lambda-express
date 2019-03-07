@@ -1,3 +1,6 @@
+/**
+* @module Router
+*/
 // TODO: look at whether we can remove the dependency on underscore
 import _ from 'underscore';
 import {
